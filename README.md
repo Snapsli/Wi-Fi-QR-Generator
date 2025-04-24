@@ -31,13 +31,14 @@
 
 ### 📥 Скачать
 
-1. Перейди в раздел [Releases]([https://github.com/Snapsli/Wi-Fi-QR-Generator/releases/tag/v1.2)])
+1. Перейди в раздел [Releases] ([https://github.com/Snapsli/Wi-Fi-QR-Generator/releases/tag/v1.2)])
 2. Скачай архив.
-3. Запусти файл wifi_qr_gui_delete.exe в папке /dist
+3. Запусти файл QR.CODE.WI-FI.Generator.exe
+ в папке /dist
 
 ### ▶️ Запуск
 
-Просто дважды кликни по `wifi_qr_gui_delete.exe`.  
+Просто дважды кликни по `QR.CODE.WI-FI.Generator.exe`.  
 Откроется окно с простым интерфейсом.
 
 ---
@@ -87,8 +88,8 @@ It works as an independent window (without a browser), saves the history and doe
 ### 📥 Download
 
 1. Go to the [Releases] section([https://github.com/Snapsli/Wi-Fi-QR-Generator/releases/tag/v1.2)])
-2. Download archive `wifi_qr_gui_delete.zip `
-3. Launch the file wifi_qr_gui_delete.exe in the /dist folder
+2. Download archive `QR.CODE.WI-FI.Generator.zip `
+3. Launch the file QR.CODE.WI-FI.Generator.exe in the /dist folder
 
 ### ▶️ Launch
 
