@@ -31,12 +31,13 @@
 
 ### 📥 Скачать
 
-1. Перейди в раздел [Releases](https://github.com/твой_ник/репозиторий/releases)
-2. Скачай файл `wifi_qr_gui.exe`
+1. Перейди в раздел [Releases]([https://github.com/Snapsli/Wi-Fi-QR-Generator/releases/tag/v1.2)])
+2. Скачай архив.
+3. Запусти файл wifi_qr_gui_delete.exe в папке /dist
 
 ### ▶️ Запуск
 
-Просто дважды кликни по `wifi_qr_gui.exe`.  
+Просто дважды кликни по `wifi_qr_gui_delete.exe`.  
 Откроется окно с простым интерфейсом.
 
 ---
@@ -47,7 +48,7 @@
 
 ```bash
 pip install flask qrcode pillow pywebview pyinstaller
-pyinstaller wifi_qr_gui.spec
+pyinstaller wifi_qr_gui_delete.spec
 
 📂 Получившийся .exe будет в папке dist/
 
@@ -85,12 +86,13 @@ It works as an independent window (without a browser), saves the history and doe
 
 ### 📥 Download
 
-1. Go to the [Releases] section(https://github.com/твой_ник/репозиторий/releases )
-2. Download the file `wifi_qr_gui.exe `
+1. Go to the [Releases] section([https://github.com/Snapsli/Wi-Fi-QR-Generator/releases/tag/v1.2)])
+2. Download archive `wifi_qr_gui_delete.zip `
+3. Launch the file wifi_qr_gui_delete.exe in the /dist folder
 
 ### ▶️ Launch
 
-Just double-click on `wifi_qr_gui.exe `.  
+Just double-click on `wifi_qr_gui_delete.exe `.  
 A window with a simple interface will open.
 
 ---
@@ -101,6 +103,6 @@ If you are a developer and want to build the `.exe` yourself:
 
 ```bash
 pip install flask qrcode pillow pywebview pyinstaller
-pyinstaller wifi_qr_gui.spec
+pyinstaller wifi_qr_gui_delete.spec
 
 The resulting one .the exe will be in the dist folder/
