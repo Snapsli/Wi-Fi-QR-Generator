@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Wi-Fi QR Генератор</title>
+    <style>
+        body { font-family: Arial; background: #f4f6f8; padding: 20px; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .qr-image { margin-top: 20px; }
+        .history { margin-top: 30px; }
+        .qr-entry { border-bottom: 1px solid #ddd; margin-bottom: 20px; padding-bottom: 10px; }
+        button, input[type=text] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover { background: #0056b3; }
+        .delete-button {
+            background: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Wi-Fi QR Генератор</h2>
+        <form method="post">
+            <input type="text" name="ssid" placeholder="Имя сети (SSID)" required>
+            <input type="text" name="password" placeholder="Пароль Wi-Fi" required>
+            <button type="submit">Создать QR</button>
+        </form>
+
+        {% if last_qr %}
+            <div class="qr-image">
+                <h3>Последний QR:</h3>
+                <strong>SSID:</strong> {{ last_qr[0] }}<br>
+                <img src="data:image/png;base64,{{ last_qr[1] }}">
+            </div>
+        {% endif %}
+
+        <div class="history">
+            <h3>История:</h3>
+            {% for id, ssid, qr, created_at in history %}
+                <div class="qr-entry">
+                    <strong>SSID:</strong> {{ ssid }}<br>
+                    <em>{{ created_at }}</em><br>
+                    <img src="data:image/png;base64,{{ qr }}" width="180"><br>
+                    <a href="{{ url_for('delete_route', item_id=id) }}">
+                        <button class="delete-button">Удалить</button>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
